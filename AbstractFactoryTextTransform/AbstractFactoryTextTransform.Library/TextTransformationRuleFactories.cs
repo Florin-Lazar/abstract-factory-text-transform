@@ -11,6 +11,7 @@ namespace AbstractFactoryTextTransform.Library
 
         public static void RegisterFactories()
         {
+            // Poor's man DI
             RegisteredFactories.Add(new StringReplaceTransformationRuleFactory());
             RegisteredFactories.Add(new StringInsertTransformationRuleFactory());
         }
