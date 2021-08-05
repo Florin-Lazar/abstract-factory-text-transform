@@ -1,15 +1,16 @@
 ﻿using AbstractFactoryTextTransform.Library.Abstractions;
+using AbstractFactoryTextTransform.Library.Rules.StringReplace;
 using System.Collections.Generic;
 
 namespace AbstractFactoryTextTransform.Library
 {
     public class TextTransformationRuleFactories
     {
-        public static List<ITextTransformationRuleFactory> RegisteredFactories { get; private set; }
+        public static List<ITextTransformationRuleFactory> RegisteredFactories { get; private set; } = new List<ITextTransformationRuleFactory>();
 
-        public static void RegisterFactory(ITextTransformationRuleFactory factory)
+        public static void RegisterFactories()
         {
-            RegisteredFactories.Add(factory);
+            RegisteredFactories.Add(new StringReplaceTransformationRuleFactory());
         }
     }
 }

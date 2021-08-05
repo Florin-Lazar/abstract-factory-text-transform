@@ -2,6 +2,6 @@
 {
     public interface ITextTransformationRuleFactory
     {
-        ITextTransformationRule Create();
+        ITextTransformationRule Create(TextTransformationOptions options);
     }
 }
